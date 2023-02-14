@@ -28,10 +28,25 @@ ul {
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+}
+
 
 // Styles
 
 // Header
+.header {
+    position: relative;
+    z-index: 10;
+}
+
 .header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -72,4 +87,121 @@ ul {
 .btn_sign-in {
     background-color: $green;
     color: $bg;
+}
+
+// Plant
+.plant {
+    position: relative;
+    top: -80px;
+    left: 0;
+}
+
+.plant__img {
+    background: url('./img/plant.png');
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 740px;
+}
+
+.plant__wrapper {
+    display: flex;
+    gap: 77px;
+}
+
+.plant__img,
+.plant__text {
+    width: 100%;
+}
+
+.plant__text {
+    margin-top: 186px;
+}
+
+.plant__heading {
+    font-weight: $fw-500;
+    font-size: $fs-68;
+    line-height: $lh-83;
+    color: $green;
+    margin-bottom: 24px;
+    width: 514px;
+}
+
+.plant__sub-heading {
+    font-size: $fs-18;
+    line-height: $lh-32;
+    color: $black-light;
+    opacity: .8;
+    width: 426px;
+    margin-bottom: 110px;
+}
+
+.plant__btn {
+    display: flex;
+    gap: 53px;
+}
+
+.plant__btn-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 160px;
+    font-weight: $fw-500;
+}
+
+.plant__btn-link:nth-child(2) {
+    background: $green;
+    color: white;
+}
+
+.plant__btn-link:nth-child(1):hover {
+    .arrow__prev {
+        color: $bg;
+    }
+
+    background-color: $green;
+    color: $bg;
+}
+
+.arrow__prev,
+.arrow__next {
+    display: flex;
+    align-items: center;
+    font-size: $fs-24;
+    line-height: $lh-29;
+    gap: 8px;
+}
+
+.arrow__prev {
+    color: $gray;
+}
+
+.arrow__next {
+    color: $smoke;
+}
+
+.previous,
+.next {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+.previous {
+    background: url('./img/arrow-back.png');
+}
+
+.next {
+    background: url('./img/arrow-next.png');
+    order: 2;
+}
+
+.plant__btn-text {
+    font-size: $fs-32;
+    line-height: $lh-39;
 }
