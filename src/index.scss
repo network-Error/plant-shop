@@ -300,3 +300,41 @@ p {
     font-weight: $fw-600;
     line-height: $lh-20;
 }
+
+// Relax
+.relax {
+    margin-bottom: 80px;
+}
+
+.relax__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 84px;
+}
+
+.relax__description {
+    display: flex;
+    flex-direction: column;
+    gap: 74px;
+}
+
+.relax__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.relax__heading {
+    font-weight: $fw-700;
+    font-size: $fs-40;
+    line-height: $lh-56;
+    color: $black-light;
+    width: 470px;
+}
+
+.relax__sub-heading {
+    line-height: $lh-28;
+    color: $black-light;
+    opacity: .8;
+    width: 480px;
+}
