@@ -44,10 +44,10 @@
                             </li>
                         </div>
                         <li class="nav__item">
-                            <a href="#" class="nav__link btn btn_sign-up">Sign Up</a>
+                            <button type="button" class="nav__link btn btn_sign-up">Sign Up</button >
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link btn btn_sign-in">Sign In</a>
+                            <button type="button" class="nav__link btn btn_sign-in">Sign In</button >
                         </li>
                     </ul>
                 </nav>
@@ -80,10 +80,10 @@
                                 </a>
                             </li>
                             <li class="burger__item">
-                                <a href="#" class="burger__link">Sign Up</a>
+                                <button class="burger__link burger-btn-sign-up">Sign Up</button>
                             </li>
                             <li class="burger__item">
-                                <a href="#" class="burger__link">Sign In</a>
+                                <button class="burger__link burger-btn-sign-in">Sign In</button>
                             </li>
                         </ul>
                     </nav>
@@ -92,6 +92,44 @@
         </div>
     </header>
     <main class="main">
+        <form action="" class="registration-form">
+            <legend>Registration</legend>
+            <fieldset>
+                <label for="name">Your name:</label>
+                <input id="name" type="text" placeholder="Enter name">
+            </fieldset>
+            <fieldset>
+                <label for="email">Your email:</label>
+                <input id="email" type="email" placeholder="Enter email">
+            </fieldset>
+            <fieldset>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter password">
+            </fieldset>
+            <fieldset>
+                <label for="repeatPassword">Repeat password:</label>
+                <input id="repeatPassword" type="password" placeholder="Repeat password">
+            </fieldset>
+            <div class="registration-form__wrapper-btn">
+                <button type="button" class="close-btn">Close</button>
+                <button type="submit" class="registration-btn">Registration</button>
+            </div>
+        </form>
+        <form action="" class="sign-in-form">
+            <legend>Sign In</legend>
+            <fieldset>
+                <label for="email-singIn">Your email:</label>
+                <input id="email-singIn" type="email" placeholder="Enter email">
+            </fieldset>
+            <fieldset>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter password">
+            </fieldset>
+            <div class="registration-form__wrapper-btn">
+                <button type="button" class="close-btn-sign-in">Close</button>
+                <button type="submit" class="sign-in-btn">Sign In</button>
+            </div>
+        </form>
         <section class="plant">
             <div class="plant__wrapper">
                 <div class="plant__img"></div>
