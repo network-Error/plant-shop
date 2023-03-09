@@ -79,6 +79,12 @@ p {
     -o-transition: .3s;
 }
 
+.btn_sign-up,
+.btn_sign-in {
+    background-color: inherit;
+    border: none;
+}
+
 .btn_sign-up:hover {
     background-color: $green;
     color: $bg;
@@ -104,6 +110,18 @@ p {
 .burger__menu-btn,
 .burger__wrapper {
     display: none;
+}
+
+.burger-btn-sign-up,
+.burger-btn-sign-in {
+    cursor: pointer;
+}
+
+.close-btn,
+.registration-btn,
+.close-btn-sign-in,
+.sign-in-btn {
+    cursor: pointer;
 }
 
 @media (max-width: $lg-max) {
@@ -216,6 +234,16 @@ p {
                 color: $bg;
             }
         }
+
+        .burger-btn-sign-up,
+        .burger-btn-sign-in {
+            border: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
     }
 
     .burger__link:hover {
@@ -226,6 +254,138 @@ p {
 @media (max-width: $xs-max) {
     .burger__list {
         width: 200px;
+    }
+}
+
+// Registration / SignIn form
+.registration-form,
+.sign-in-form {
+    width: 600px;
+    height: 700px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    background-color: $bg-gray;
+    padding: 0 15px;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    & legend {
+        font-size: $fs-20;
+        font-family: $montserrat;
+        font-weight: $fw-700;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    & fieldset {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $black-footer;
+        padding: 5px 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        height: 50px;
+        align-items: center;
+
+        & input {
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+
+            &::placeholder,
+            &:active {
+                padding-left: 5px;
+            }
+        }
+    }
+
+    & .registration-form__wrapper-btn {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .close-btn,
+    .registration-btn,
+    .close-btn-sign-in,
+    .sign-in-btn {
+        border: none;
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        background-color: $green;
+        color: $bg;
+    }
+}
+
+.mask {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.show-form {
+    display: flex;
+    opacity: 1;
+}
+
+.show-mask {
+    display: block;
+}
+
+.blur {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.no-blur {
+    filter: none;
+    -webkit-filter: none;
+}
+
+@media (max-width: $xs-max) {
+    .registration-form,
+    .sign-in-form {
+        width: 100%;
+
+        & fieldset {
+            height: auto;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            & label,
+            & input {
+                width: 100%;
+            }
+        }
+
+        & .registration-form__wrapper-btn {
+            justify-content: space-between;
+            gap: 10px;
+        }
     }
 }
 
